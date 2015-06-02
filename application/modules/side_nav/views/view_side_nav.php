@@ -51,6 +51,11 @@
                           /* For now we pass the parameter 0 as userID   */
                           echo  '<li> <a href="'.base_url('mb_contact/render_template/0').'"><i class="fa fa-envelope-o fa-fw"></i> '.$translations['Contact'].'</a></li>';
                           ?>
+                          
+                            <?php 
+                          /* For now we pass the parameter 0 as userID   */
+                          echo  '<li> <a href="'.base_url('mb_privacy_policy/render_template/0').'"><i class="fa fa-lock fa-fw"></i> '.$translations['PrivacyPolicy'].'</a></li>';
+                          ?>
                      
                     </ul>
                 </div>

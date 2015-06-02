@@ -27,7 +27,7 @@ include_once 'project_config.php';
 switch (ENVIRONMENT)
 {
 	case 'development':
-		$config['base_url'] = 'http://localhost/MVCProjectCodeIgniter/';
+		$config['base_url'] = 'http://localhost/evaluame_org/';
 		break;
 	case 'testing':
 		$config['base_url'] = 'http://www.evaluame.org/';
@@ -37,7 +37,7 @@ switch (ENVIRONMENT)
 		break;
 
 	default:
-		$config['base_url'] = 'http://localhost/MVCProjectCodeIgniter/';
+		$config['base_url'] = 'http://localhost/evaluame_org/';
 }
 /*
 |--------------------------------------------------------------------------

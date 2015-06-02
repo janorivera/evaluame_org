@@ -27,8 +27,8 @@ class Mb_contact extends MX_Controller {
 		$email= $this->input->post ( 'email' ) ;
 		$name= $this->input->post ( 'name' ) ;
 		
-		$this->email->from('pidetuhora@pilumorales.com', $name);
-		$this->email->to('contacto@pilumorales.com');
+		$this->email->from('contact_form@evaluame.org', $name);
+		$this->email->to('contacto@evaluame.org');
 		//$this->email->cc('another@another-example.com');
 		//$this->email->bcc('them@their-example.com');
 		
