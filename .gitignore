@@ -6,7 +6,6 @@
 !*/cache/.htaccess
 
 application/composer.phar
-application/vendor/
 Notes
 ComposerNotes
 #htaccess might be different
