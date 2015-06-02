@@ -1,0 +1,32 @@
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+application/composer.phar
+application/vendor/
+Notes
+ComposerNotes
+#htaccess might be different
+.htaccess
+
+#project 
+.project
+
+
+#tests
+tests/
+db_tests
+
+#protect database credentials
+application/config/database.php
+application/config/project_config.php
+application/config/project_constants.php
+
+
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock

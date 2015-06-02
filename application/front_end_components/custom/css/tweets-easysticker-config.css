@@ -1,0 +1,109 @@
+.custom-panel{
+	
+border:1px solid #31708F;
+background:#c6e4ff;
+
+}
+
+.tweets-panel {
+border: 1px solid #ccc;
+margin: 5px 0;
+padding: 5px;
+background: #ffffff;
+}
+.tweets-panel ul {
+padding: 0;
+list-style: none;
+}
+.tweets-panel li {
+padding: 1px;
+border-bottom: 1px dashed #ccc;
+}
+.tweets-panel li.odd {
+background: #fafafa;
+}
+.tweets-panel li:after {
+content: '';
+display: block;
+clear: both;
+}
+.tweets-panel img {
+float: left;
+width: 50px;
+margin: 5px 10px 0 0;
+}
+.tweets-panel a {
+font-family: Arial, sans-serif;
+font-size: 20px;
+font-weight: bold;
+color: #06f;
+}
+.tweets-panel p {
+margin: 0 0 0;
+font-size: 14px;
+}
+.tweets-panel p.date-source {
+margin: 2px 2px 2px 2px;
+ text-align: right
+
+}
+.demo3 {
+font-family: Arial, sans-serif;
+border: 1px solid #C20;
+margin: 50px 0;
+font-style: italic;
+position: relative;
+padding: 0 0 0 80px;
+box-shadow: 0 2px 5px -3px #000;
+border-radius: 3px;
+}
+.demo3:before {
+content: "Latest News";
+display: inline-block;
+font-style: normal;
+background: #C20;
+padding: 10px;
+color: #FFF;
+font-weight: bold;
+position: absolute;
+top: 0;
+left: 0;
+}
+.demo3:after {
+content: '';
+display: block;
+top: 0;
+left: 80px;
+background: linear-gradient(#FFF, rgba(255, 255, 255, 0));
+height: 20px;
+}
+.demo3 ul li {
+list-style: none;
+padding: 10px 0;
+}
+.demo5 {
+border: 2px solid #FF3333;
+margin-top: 10px;
+border-radius: 10px;
+width: 500px;
+-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.demo5 ul {
+padding: 0;
+}
+.demo5 ul li {
+padding: 10px 10px 10px 10px;
+border-bottom: 1px solid #FF3333;
+border-radius: 10px;
+list-type: none;
+margin: 0;
+}
+.et-run {
+background-color: #0088ff;
+color: white;
+border: 1px solid black;
+}
+
+			

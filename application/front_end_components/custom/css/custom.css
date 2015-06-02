@@ -1,0 +1,58 @@
+.label-circle-huge {
+    width: 100px;
+    height: 100px;
+    padding: 24px 32px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.428571429;
+}
+
+.label-blue {
+	
+	background-color:#31708f;
+	
+}
+
+.label-green {
+	
+	background-color:#3c763d;
+	
+}
+.label-red	{
+	background-color:#a94442;
+	
+}
+
+.label-yellow {
+	
+	background-color:#8a6d3b;
+	
+}
+
+/* !
+Application color palette
+
+*/
+
+.palette-background-blue {
+	
+	background-color:#31708f;
+	
+}
+.palette-background-green {
+	
+	background-color:#3c763d;
+	
+}
+.palette-background-red	{
+	background-color:#a94442;
+	
+}
+
+.palette-background-yellow {
+	
+	background-color:#8a6d3b;
+	
+}
+

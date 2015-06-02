@@ -1,0 +1,13 @@
+<?php 
+if (!defined('BASEPATH')) exit('No direct script access allowed');
+class Db_table_politician_history extends MX_Controller
+{
+
+function __construct() {
+parent::__construct();
+}
+
+
+
+
+}
