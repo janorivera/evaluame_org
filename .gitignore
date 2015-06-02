@@ -7,6 +7,7 @@
 
 application/composer.phar
 Notes
+application/vendor/
 ComposerNotes
 #htaccess might be different
 .htaccess
