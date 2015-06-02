@@ -179,8 +179,33 @@
                                     <i class="fa fa-female fa-3x"></i>
                                 </div>
 									<div class="text-center">
-										<div class="huge"><?php     if (isset($politicianSummary['gbg']['0']['ScoreAvg'])) echo $politicianSummary['gbg']['0']['ScoreAvg']*100;?>%</div>
-										<div class="text-center"><?php    if (isset($politicianSummary['gbg']['0']['NrVoters'])) echo $politicianSummary['gbg']['0']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										<div class="huge"><?php    
+										 if (isset($politicianSummary['gbg']['0']['ScoreAvg']))
+										 { 
+										 	if ($politicianSummary['gbg']['0']['Gender'] == 'female')
+										 	echo $politicianSummary['gbg']['0']['ScoreAvg']*100;
+										 }
+										 else  if (isset($politicianSummary['gbg']['1']['ScoreAvg']))
+										 { 
+										 	if ($politicianSummary['gbg']['1']['Gender'] == 'female')
+										 	echo $politicianSummary['gbg']['1']['ScoreAvg']*100;
+										 }
+										 ?>%</div>
+										<div class="text-center"><?php    
+										if (isset($politicianSummary['gbg']['0']['NrVoters']))
+										{
+											if ($politicianSummary['gbg']['0']['Gender'] == 'female')
+												echo $politicianSummary['gbg']['0']['NrVoters'];
+										}
+										else  if (isset($politicianSummary['gbg']['1']['NrVoters']))
+										{
+											if ($politicianSummary['gbg']['1']['Gender'] == 'female')
+												echo $politicianSummary['gbg']['0']['NrVoters'];
+										}
+										
+										
+										
+										?> <?php echo $translations['Votes']?></div>
 									</div>
 								</div>
 							</div>
@@ -206,8 +231,37 @@
                                     <i class="fa fa-male fa-3x"></i>
                                 </div>
 									<div class="text-center">
-										<div class="huge"><?php  if (isset($politicianSummary['gbg']['1']['ScoreAvg']))   echo $politicianSummary['gbg']['1']['ScoreAvg']*100;?>%</div>
-										<div class="text-center"><?php   if (isset($politicianSummary['gbg']['1']['ScoreAvg']))   echo $politicianSummary['gbg']['1']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										<div class="huge"><?php  
+										
+										if (isset($politicianSummary['gbg']['0']['ScoreAvg']))
+										{
+											if ($politicianSummary['gbg']['0']['Gender'] == 'male')
+												echo $politicianSummary['gbg']['0']['ScoreAvg']*100;
+										}
+										else  if (isset($politicianSummary['gbg']['1']['ScoreAvg']))
+										{
+											if ($politicianSummary['gbg']['1']['Gender'] == 'male')
+												echo $politicianSummary['gbg']['1']['ScoreAvg']*100;
+										}
+										
+										
+										?>%</div>
+										<div class="text-center"><?php   
+										
+										
+										if (isset($politicianSummary['gbg']['0']['NrVoters']))
+										{
+											if ($politicianSummary['gbg']['0']['Gender'] == 'male')
+												echo $politicianSummary['gbg']['0']['NrVoters'];
+										}
+										else  if (isset($politicianSummary['gbg']['1']['NrVoters']))
+										{
+											if ($politicianSummary['gbg']['1']['Gender'] == 'male')
+												echo $politicianSummary['gbg']['0']['NrVoters'];
+										}
+										
+										
+										?> <?php echo $translations['Votes']?></div>
 									</div>
 								</div>
 							</div>
