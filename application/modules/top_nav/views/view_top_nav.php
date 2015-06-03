@@ -8,7 +8,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url()?>">Evaluame.org</a>
+                <a class="navbar-brand" href="<?php echo base_url()?>"><img src="<?php echo get_media_path('images/icons', 'evaluame_logo', 'png'); ?>"
+				alt="Evaluame.org" height="55px" /> </a>
+                
             </div>
             <!-- /.navbar-header -->
           

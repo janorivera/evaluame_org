@@ -1,7 +1,7 @@
 <?php
 	
 if (ENVIRONMENT == 'production' || ENVIRONMENT == 'testing')$projectFolder='';
-else $projectFolder='/MVCProjectCodeIgniter';
+else $projectFolder='/evaluame_org';
 
 echo '<script src="'.$projectFolder.'/application/front_end_components/bootstrap/js/jquery.js"></script>';
 echo '<script src="'.$projectFolder.'/application/front_end_components/bootstrap/js/bootstrap.js"></script>';
