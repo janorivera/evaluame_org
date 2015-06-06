@@ -61,7 +61,7 @@ class Mdl_mb_politician_info extends CI_Model {
 		$row= $this->Mdl_db_table_politician_scores->get_where_custom($where);
 		$this->Mdl_db_table_politician_scores->update_where_custom(['Current'=> 0], ['UserId'=> $userId,'PoliticianId'=>$politicianId, 'Current'=> 1]);
 		if ($row==null)$this->Mdl_db_table_politician_scores->insert($data);
-		else $this->Mdl_db_table_politician_scores->update_where_custom(['Score'=> ($score/5),'Current'=>1], $where);
+		else $this->Mdl_db_table_politician_scores->update_where_custom(['Score'=> ($score/100),'Current'=>1], $where);
 		
 		
 	}

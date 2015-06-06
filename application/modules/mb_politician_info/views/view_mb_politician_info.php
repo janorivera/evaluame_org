@@ -1,4 +1,14 @@
 
+<?php 
+
+/*For testing purposes only*/
+if (ENVIRONMENT == 'development'){
+	$user['FirstName']= 'Developer';
+	
+}
+
+
+?>
 <!-- Page Content -->
 <div id="page-wrapper" style="min-height: 489px;">
 
