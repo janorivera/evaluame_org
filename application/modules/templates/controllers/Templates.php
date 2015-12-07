@@ -21,7 +21,7 @@ class Templates extends MX_Controller {
 		}
 		else
 		{
-			$lang = 'en';
+			$lang = 'es';
 		}
 		$translations= $this->Mdl_db_table_translations->get_where($lang);
 		foreach ( $translations as $translation){

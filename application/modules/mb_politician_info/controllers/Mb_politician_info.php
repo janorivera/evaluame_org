@@ -40,7 +40,7 @@ class Mb_politician_info extends MX_Controller {
 		 * Set ONLINE to false to work offline
 		 */
 		
-		define('ONLINE', true);
+		define('ONLINE', false);
 		if (ENVIRONMENT == 'production')define('ONLINE', true);
 		if ( ONLINE== true){
 		//the strtok will get the first word since the format for the lastname is "lastname1 lastname2"

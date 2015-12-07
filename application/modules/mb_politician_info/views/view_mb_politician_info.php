@@ -267,7 +267,7 @@ if (ENVIRONMENT == 'development'){
 										if (isset($politicianSummary['gbg']['1']['NrVoters']))
 										{
 											if ($politicianSummary['gbg']['1']['Gender'] == 'male')
-												echo $politicianSummary['gbg']['0']['NrVoters'];
+												echo $politicianSummary['gbg']['1']['NrVoters'];
 										}
 										
 										
