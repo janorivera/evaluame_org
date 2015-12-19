@@ -344,7 +344,9 @@ if (ENVIRONMENT == 'development'){
 							<div class="news news-panel">
 								<ul>
 								<?php
-								// echo var_dump ($news);
+								echo var_dump (ONLINE);
+								echo var_dump (ENVIRONMENT);
+								echo var_dump ($news);
 								foreach ( $news as $unitNews ) {
 									echo '<li>';
 									echo '<img src="' . $unitNews ['image'] . '"  />';
@@ -399,7 +401,7 @@ if (ENVIRONMENT == 'development'){
 								<div class="user-tweets tweets-panel">
 									<ul>
 								<?php
-									// echo var_dump ($news);
+							  echo var_dump ($userTweets);
 								foreach ( $userTweets  as $userTweet ) {
 									echo '<li>';
 									echo '<img src="' . $userTweet ['user'] ['profile_image_url'] . '"  />';
@@ -444,7 +446,7 @@ if (ENVIRONMENT == 'development'){
 								<div class="tweets tweets-panel">
 									<ul>
 								<?php
-									// echo var_dump ($news);
+								 echo var_dump ($tweets ['statuses']);
 								foreach ( $tweets ['statuses'] as $tweet ) {
 									echo '<li>';
 									echo '<img src="' . $tweet ['user'] ['profile_image_url'] . '"  />';
