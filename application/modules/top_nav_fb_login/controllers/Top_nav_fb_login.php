@@ -33,7 +33,7 @@ class Top_nav_fb_login extends MX_Controller {
 			}
 			else
 			{
-				$lang = 'en';
+				$lang = 'es';
 			}
 			
 			if ($lang=='en')

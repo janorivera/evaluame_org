@@ -37,7 +37,9 @@ if (ENVIRONMENT == 'development'){
 					</h4>
 					<h4><?php echo $politicianProfile['PartyName']   ?></h4>
 					<h5>
-						<strong><?php echo $politicianProfile['RegionName']   ?></strong>
+						<strong><?php echo $politicianProfile['RegionName']   ?>
+						</strong>
+						
 					</h5>
 
 				</div>
@@ -76,12 +78,12 @@ if (ENVIRONMENT == 'development'){
                     ?> "
                     ><?php echo $translations['Vote']?></button>
 
-					<button type="reset" class="btn btn-default
+					<button type="reset" class="btn btn-default 
 					<?php 
 					if ($user['FirstName']=='Invitado' or  $user['FirstName']=='Guest') 
 				    echo 'disabled';
-                    ?> "
-					"><?php echo $translations['Erase']?></button>
+                    ?>"
+					 ><?php echo $translations['Erase']?></button>
                        
 				 <?php echo form_close(); ?>
 					
@@ -402,6 +404,7 @@ if (ENVIRONMENT == 'development'){
 									<ul>
 								<?php
 							  #echo var_dump ($userTweets);
+								if($politicianProfile['Twitter']!='') {
 								foreach ( $userTweets  as $userTweet ) {
 									echo '<li>';
 									echo '<img src="' . $userTweet ['user'] ['profile_image_url'] . '"  />';
@@ -412,6 +415,11 @@ if (ENVIRONMENT == 'development'){
 									// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
 									echo '</li>';
 								}
+								} else {
+									echo '<p>' .  $translations['NoTwitter'] . '</p>';
+									
+								}
+								
 								?>
 
 								</ul>
@@ -446,6 +454,7 @@ if (ENVIRONMENT == 'development'){
 								<div class="tweets tweets-panel">
 									<ul>
 								<?php
+								if($politicianProfile['Twitter']!='') {
 								# echo var_dump ($tweets ['statuses']);
 								foreach ( $tweets ['statuses'] as $tweet ) {
 									echo '<li>';
@@ -456,6 +465,10 @@ if (ENVIRONMENT == 'development'){
 									echo '<p class= "text-info date-source">@' . $tweet ['user'] ['screen_name'] . ' - ' . $tweet ['created_at'] . '</p>';
 									// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
 									echo '</li>';
+								}
+								} else {
+									echo '<p>' .  $translations['NoTwitter'] . '</p>';
+									
 								}
 								?>
 

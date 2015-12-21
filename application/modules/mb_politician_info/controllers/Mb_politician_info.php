@@ -50,7 +50,7 @@ class Mb_politician_info extends MX_Controller {
 	   
 		
 		/*twitter*/
-		
+		if ($data['politicianProfile']['Twitter']!='') {
 		$getTweets = '?q=@'.$data['politicianProfile']['Twitter'].'&result_type=recent&count=20&lang=es';
 		$this->twitter = new TwitterAPIExchange($this->config->item('settings','twitter'));
 		try {
@@ -71,6 +71,7 @@ class Mb_politician_info extends MX_Controller {
 			$data['userTweets'] = json_decode($response,true);
 		} catch (Exception $e) {
 			$response=null;
+		}
 		}
 		}
 		
