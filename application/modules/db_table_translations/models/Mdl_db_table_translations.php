@@ -19,9 +19,8 @@ class Mdl_db_table_translations extends CI_Model {
 	function get_where($lang) {
 		$table = $this->get_table ();
 		$query = $this->db->get_where ( $table, array (
-				'Lang' => $lang
+				'Lang' => $lang 
 		) );
 		return $query->result_array ();
 	}
-
 }

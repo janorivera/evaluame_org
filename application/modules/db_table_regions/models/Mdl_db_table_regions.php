@@ -1,11 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 class Mdl_db_table_regions extends CI_Model {
-
 	function __construct() {
 		parent::__construct ();
-		$this->load->database();
+		$this->load->database ();
 	}
 	function get_table() {
 		$table = "Regions";
@@ -15,9 +13,7 @@ class Mdl_db_table_regions extends CI_Model {
 		$table = $this->get_table ();
 		$this->db->order_by ( $order_by );
 		$query = $this->db->get ( $table );
-		return $query->result_array();
+		return $query->result_array ();
 	}
-	
-	
 }
 

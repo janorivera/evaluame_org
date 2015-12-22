@@ -19,30 +19,29 @@ class Mdl_db_table_users extends CI_Model {
 	function get_where($userId) {
 		$table = $this->get_table ();
 		$query = $this->db->get_where ( $table, array (
-				'UserId' => $userId
+				'UserId' => $userId 
 		) );
 		return $query->row_array ();
 	}
 	function get_where_custom($custom, $value) {
 		$table = $this->get_table ();
 		$query = $this->db->get_where ( $table, array (
-				$custom => $value
+				$custom => $value 
 		) );
 		return $query->row_array ();
 	}
 	function insert($data) {
-		$table = $this->get_table();
-		$this->db->insert($table, $data);
+		$table = $this->get_table ();
+		$this->db->insert ( $table, $data );
 	}
-	
 	function update_where($id, $data) {
-		$table = $this->get_table();
-		$this->db->where('UserId', $id);
-		$this->db->update($table, $data);
+		$table = $this->get_table ();
+		$this->db->where ( 'UserId', $id );
+		$this->db->update ( $table, $data );
 	}
-	function update_where_custom($custom,$value, $data) {
-		$table = $this->get_table();
-		$this->db->where($custom, $value);
-		$this->db->update($table, $data);
+	function update_where_custom($custom, $value, $data) {
+		$table = $this->get_table ();
+		$this->db->where ( $custom, $value );
+		$this->db->update ( $table, $data );
 	}
 }

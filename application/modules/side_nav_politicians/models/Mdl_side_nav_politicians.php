@@ -32,14 +32,15 @@ class Mdl_side_nav_politicians extends CI_Model {
 				foreach ( $data ['Politicians'] as $politicians ) {
 					if (($politicians ['RegionId'] == $region ['RegionId']) && ($politicians ['PoliticianTypeId'] == $politicianType ['PoliticianTypeId'])) {
 						
-						array_push ( $data ['SortedData'] [$politicianType ['TypeName']] [$region ['RegionName']], 
-								array('PoliticianName' => $politicians ['FirstName'] . ' ' . $politicians ['LastName'] ,
-										'PoliticianId' => $politicians['PoliticianId']) );
+						array_push ( $data ['SortedData'] [$politicianType ['TypeName']] [$region ['RegionName']], array (
+								'PoliticianName' => $politicians ['FirstName'] . ' ' . $politicians ['LastName'],
+								'PoliticianId' => $politicians ['PoliticianId'] 
+						) );
 					}
 				}
 			}
 		}
-		//var_dump($data);
+		// var_dump($data);
 		return $data;
 	}
 }

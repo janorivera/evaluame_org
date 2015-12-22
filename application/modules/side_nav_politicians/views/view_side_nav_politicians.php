@@ -18,10 +18,9 @@ foreach ( array_keys ( $SortedData ) as $politicianType ) {
 				echo '</ul>  </li>';
 			} else {
 				foreach ( $SortedData [$politicianType] [$region] as $politician ) {
-						
+					
 					echo '<li> <a href="' . base_url ( 'mb_politician_info/render_template/' . $politician ['PoliticianId'] ) . '">' . $politician ['PoliticianName'] . '</a></li>';
 				}
-				
 			}
 		}
 	}

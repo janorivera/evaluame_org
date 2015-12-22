@@ -1,12 +1,10 @@
 
-<?php 
+<?php
 
-/*For testing purposes only*/
-if (ENVIRONMENT == 'development'){
-	$user['FirstName']= 'Developer';
-	
+/* For testing purposes only */
+if (ENVIRONMENT == 'development') {
+	$user ['FirstName'] = 'Developer';
 }
-
 
 ?>
 <!-- Page Content -->
@@ -24,7 +22,8 @@ if (ENVIRONMENT == 'development'){
 					<input id="input-1" class="rating" data-min="0" data-max="100"
 						data-size="sm" data-step="10"
 						value="<?php echo $politicianProfile['ScoreAvg']*100?>"
-						data-default-caption="<?php echo $politicianProfile['ScoreAvg']*100?> %" data-readonly="true">
+						data-default-caption="<?php echo $politicianProfile['ScoreAvg']*100?> %"
+						data-readonly="true">
 
 					<h5>
 						<strong><?php echo $translations['NrVoters']?></strong> <?php echo $politicianProfile['NrVoters']?>
@@ -37,9 +36,9 @@ if (ENVIRONMENT == 'development'){
 					</h4>
 					<h4><?php echo $politicianProfile['PartyName']   ?></h4>
 					<h5>
-						<strong><?php echo $politicianProfile['RegionName']   ?>
+						<strong><?php echo $politicianProfile['RegionName']?>
 						</strong>
-						
+
 					</h5>
 
 				</div>
@@ -61,29 +60,27 @@ if (ENVIRONMENT == 'development'){
 						
 						?>
 					 <input id="input-2" class="rating" data-min="0" data-max="100"
-						data-size="sm" data-step="10"
-						data-default-caption="{rating} %" name="userrating"
-						value=<?php echo $politicianScore['Score']*100; ?>   		
-						<?php 
-						if ($user['FirstName']=='Invitado' or $user['FirstName']=='Guest') 
-				        echo ' data-readonly="true"';
-						?> >
+						data-size="sm" data-step="10" data-default-caption="{rating} %"
+						name="userrating"
+						value=<?php echo $politicianScore['Score']*100; ?>
+						<?php
+						if ($user ['FirstName'] == 'Invitado' or $user ['FirstName'] == 'Guest')
+							echo ' data-readonly="true"';
+						?>>
 
-					<button type="submit" 
-					class=
-					"btn btn-primary 
-					<?php 
-					if ($user['FirstName']=='Invitado' or $user['FirstName']=='Guest' ) 
-				    echo 'disabled';
-                    ?> "
-                    ><?php echo $translations['Vote']?></button>
+					<button type="submit"
+						class="btn btn-primary 
+					<?php
+					if ($user ['FirstName'] == 'Invitado' or $user ['FirstName'] == 'Guest')
+						echo 'disabled';
+					?> "><?php echo $translations['Vote']?></button>
 
-					<button type="reset" class="btn btn-default 
-					<?php 
-					if ($user['FirstName']=='Invitado' or  $user['FirstName']=='Guest') 
-				    echo 'disabled';
-                    ?>"
-					 ><?php echo $translations['Erase']?></button>
+					<button type="reset"
+						class="btn btn-default 
+					<?php
+					if ($user ['FirstName'] == 'Invitado' or $user ['FirstName'] == 'Guest')
+						echo 'disabled';
+					?>"><?php echo $translations['Erase']?></button>
                        
 				 <?php echo form_close(); ?>
 					
@@ -102,194 +99,181 @@ if (ENVIRONMENT == 'development'){
 
 			<div class="tab-content">
 				<div id="Resumen" class="tab-pane fade in active">
-<div class="row">
-					<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
+					<div class="row">
+						<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
 
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="text-center">
-										<div class="huge"><?php    echo $politicianSummary['ranking']['rank'];?></div>
-										<div class="text-center"><?php    echo $politicianSummary['ranking']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="text-center">
+											<div class="huge"><?php    echo $politicianSummary['ranking']['rank'];?></div>
+											<div class="text-center"><?php    echo $politicianSummary['ranking']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel-footer">
-								<div class="text-center">
-									<h4>
-										<strong><?php echo $translations['Ranking']?></strong>
-									</h4>
-								</div>
-								<div class="text-center"><?php echo $translations['Current']?></div>
-								<div class="clearfix"></div>
-							</div>
-
-						</div>
-					</div>
-					
-					
-					<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
-
-						<div class="panel panel-warning">
-							<div class="panel-heading">
-								<div class="row">
+								<div class="panel-footer">
 									<div class="text-center">
-										<div class="huge"><?php    echo $politicianSummary['minScore']['ScoreAvg']*100;?>%</div>
-										<div class="text-center"><?php    echo $politicianSummary['minScore']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										<h4>
+											<strong><?php echo $translations['Ranking']?></strong>
+										</h4>
+									</div>
+									<div class="text-center"><?php echo $translations['Current']?></div>
+									<div class="clearfix"></div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
+
+							<div class="panel panel-warning">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="text-center">
+											<div class="huge"><?php    echo $politicianSummary['minScore']['ScoreAvg']*100;?>%</div>
+											<div class="text-center"><?php    echo $politicianSummary['minScore']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel-footer">
-								<div class="text-center">
-									<h4>
-										<strong><?php echo $translations['Minimum']?></strong>
-									</h4>
-								</div>
-								<div class="text-center"><?php    echo$politicianSummary['minScore']['Date']?></div>
-								<div class="clearfix"></div>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
-
-						<div class="panel panel-success">
-							<div class="panel-heading">
-								<div class="row">
+								<div class="panel-footer">
 									<div class="text-center">
-										<div class="huge"><?php    echo $politicianSummary['maxScore']['ScoreAvg']*100;?>%</div>
-										<div class="text-center"><?php    echo $politicianSummary['maxScore']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										<h4>
+											<strong><?php echo $translations['Minimum']?></strong>
+										</h4>
+									</div>
+									<div class="text-center"><?php    echo$politicianSummary['minScore']['Date']?></div>
+									<div class="clearfix"></div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
+
+							<div class="panel panel-success">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="text-center">
+											<div class="huge"><?php    echo $politicianSummary['maxScore']['ScoreAvg']*100;?>%</div>
+											<div class="text-center"><?php    echo $politicianSummary['maxScore']['NrVoters'];?> <?php echo $translations['Votes']?></div>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel-footer">
-								<div class="text-center">
-									<h4>
-										<strong><?php echo $translations['Maximum']?></strong>
-									</h4>
+								<div class="panel-footer">
+									<div class="text-center">
+										<h4>
+											<strong><?php echo $translations['Maximum']?></strong>
+										</h4>
+									</div>
+									<div class="text-center"><?php    echo$politicianSummary['maxScore']['Date']?></div>
+									<div class="clearfix"></div>
 								</div>
-								<div class="text-center"><?php    echo$politicianSummary['maxScore']['Date']?></div>
-								<div class="clearfix"></div>
-							</div>
 
+							</div>
 						</div>
+
 					</div>
 
-</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
 
-<div class="row">
-					<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
-
-						<div class="panel panel-danger">
-							<div class="panel-heading">
-								<div class="row">
-								<div class="col-xs-2">
-                                    <i class="fa fa-female fa-3x"></i>
-                                </div>
-									<div class="text-center">
-										<div class="huge"><?php    
-										 if (isset($politicianSummary['gbg']['0']['ScoreAvg']))
-										 { 
-										 	if ($politicianSummary['gbg']['0']['Gender'] == 'female')
-										 	echo $politicianSummary['gbg']['0']['ScoreAvg']*100;
-										 }
-										   if (isset($politicianSummary['gbg']['1']['ScoreAvg']))
-										 { 
-										 	if ($politicianSummary['gbg']['1']['Gender'] == 'female')
-										 	echo $politicianSummary['gbg']['1']['ScoreAvg']*100;
-										 }
-										 ?>%</div>
-										<div class="text-center"><?php    
-										if (isset($politicianSummary['gbg']['0']['NrVoters']))
-										{
-											if ($politicianSummary['gbg']['0']['Gender'] == 'female')
-												echo $politicianSummary['gbg']['0']['NrVoters'];
-										}
-										  if (isset($politicianSummary['gbg']['1']['NrVoters']))
-										{
-											if ($politicianSummary['gbg']['1']['Gender'] == 'female')
-												echo $politicianSummary['gbg']['0']['NrVoters'];
-										}
-										
-										
-										
-										?> <?php echo $translations['Votes']?></div>
+							<div class="panel panel-danger">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-2">
+											<i class="fa fa-female fa-3x"></i>
+										</div>
+										<div class="text-center">
+											<div class="huge"><?php
+											if (isset ( $politicianSummary ['gbg'] ['0'] ['ScoreAvg'] )) {
+												if ($politicianSummary ['gbg'] ['0'] ['Gender'] == 'female')
+													echo $politicianSummary ['gbg'] ['0'] ['ScoreAvg'] * 100;
+											}
+											if (isset ( $politicianSummary ['gbg'] ['1'] ['ScoreAvg'] )) {
+												if ($politicianSummary ['gbg'] ['1'] ['Gender'] == 'female')
+													echo $politicianSummary ['gbg'] ['1'] ['ScoreAvg'] * 100;
+											}
+											?>%</div>
+											<div class="text-center"><?php
+											if (isset ( $politicianSummary ['gbg'] ['0'] ['NrVoters'] )) {
+												if ($politicianSummary ['gbg'] ['0'] ['Gender'] == 'female')
+													echo $politicianSummary ['gbg'] ['0'] ['NrVoters'];
+											}
+											if (isset ( $politicianSummary ['gbg'] ['1'] ['NrVoters'] )) {
+												if ($politicianSummary ['gbg'] ['1'] ['Gender'] == 'female')
+													echo $politicianSummary ['gbg'] ['0'] ['NrVoters'];
+											}
+											
+											?> <?php echo $translations['Votes']?></div>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel-footer">
-								<div class="text-center">
-									<h4>
-										<strong><?php echo $translations['FemApproval']?></strong>
-									</h4>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-
-						</div>
-					</div>
-					
-					<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
-
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<div class="row">
-								<div class="col-xs-2">
-                                    <i class="fa fa-male fa-3x"></i>
-                                </div>
+								<div class="panel-footer">
 									<div class="text-center">
-										<div class="huge"><?php  
-										
-										if (isset($politicianSummary['gbg']['0']['ScoreAvg']))
-										{
-											if ($politicianSummary['gbg']['0']['Gender'] == 'male')
-												echo $politicianSummary['gbg']['0']['ScoreAvg']*100;
-										}
-										 if (isset($politicianSummary['gbg']['1']['ScoreAvg']))
-										{
-											if ($politicianSummary['gbg']['1']['Gender'] == 'male')
-												echo $politicianSummary['gbg']['1']['ScoreAvg']*100;
-										}
-										
-										
-										?>%</div>
-										<div class="text-center"><?php   
-										
-										
-										if (isset($politicianSummary['gbg']['0']['NrVoters']))
-										{
-											if ($politicianSummary['gbg']['0']['Gender'] == 'male')
-												echo $politicianSummary['gbg']['0']['NrVoters'];
-										}
-										if (isset($politicianSummary['gbg']['1']['NrVoters']))
-										{
-											if ($politicianSummary['gbg']['1']['Gender'] == 'male')
-												echo $politicianSummary['gbg']['1']['NrVoters'];
-										}
-										
-										
-										?> <?php echo $translations['Votes']?></div>
+										<h4>
+											<strong><?php echo $translations['FemApproval']?></strong>
+										</h4>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-xs-6 col-sm-4 col-md-6 col-lg-3">
+
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-2">
+											<i class="fa fa-male fa-3x"></i>
+										</div>
+										<div class="text-center">
+											<div class="huge"><?php
+											
+											if (isset ( $politicianSummary ['gbg'] ['0'] ['ScoreAvg'] )) {
+												if ($politicianSummary ['gbg'] ['0'] ['Gender'] == 'male')
+													echo $politicianSummary ['gbg'] ['0'] ['ScoreAvg'] * 100;
+											}
+											if (isset ( $politicianSummary ['gbg'] ['1'] ['ScoreAvg'] )) {
+												if ($politicianSummary ['gbg'] ['1'] ['Gender'] == 'male')
+													echo $politicianSummary ['gbg'] ['1'] ['ScoreAvg'] * 100;
+											}
+											
+											?>%</div>
+											<div class="text-center"><?php
+											
+											if (isset ( $politicianSummary ['gbg'] ['0'] ['NrVoters'] )) {
+												if ($politicianSummary ['gbg'] ['0'] ['Gender'] == 'male')
+													echo $politicianSummary ['gbg'] ['0'] ['NrVoters'];
+											}
+											if (isset ( $politicianSummary ['gbg'] ['1'] ['NrVoters'] )) {
+												if ($politicianSummary ['gbg'] ['1'] ['Gender'] == 'male')
+													echo $politicianSummary ['gbg'] ['1'] ['NrVoters'];
+											}
+											
+											?> <?php echo $translations['Votes']?></div>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="panel-footer">
-								<div class="text-center">
-									<h4>
-										<strong><?php echo $translations['MaleApproval']?></strong>
-									</h4>
+								<div class="panel-footer">
+									<div class="text-center">
+										<h4>
+											<strong><?php echo $translations['MaleApproval']?></strong>
+										</h4>
+									</div>
+									<div class="clearfix"></div>
 								</div>
-								<div class="clearfix"></div>
-							</div>
 
+							</div>
 						</div>
 					</div>
-</div>
 
 				</div>
 
@@ -346,9 +330,9 @@ if (ENVIRONMENT == 'development'){
 							<div class="news news-panel">
 								<ul>
 								<?php
-								#echo var_dump (ONLINE);
-								#echo var_dump (ENVIRONMENT);
-								#echo var_dump ($news);
+								// echo var_dump (ONLINE);
+								// echo var_dump (ENVIRONMENT);
+								// echo var_dump ($news);
 								foreach ( $news as $unitNews ) {
 									echo '<li>';
 									echo '<img src="' . $unitNews ['image'] . '"  />';
@@ -403,21 +387,20 @@ if (ENVIRONMENT == 'development'){
 								<div class="user-tweets tweets-panel">
 									<ul>
 								<?php
-							  #echo var_dump ($userTweets);
-								if($politicianProfile['Twitter']!='') {
-								foreach ( $userTweets  as $userTweet ) {
-									echo '<li>';
-									echo '<img src="' . $userTweet ['user'] ['profile_image_url'] . '"  />';
-									echo '<p class= "text-info"><strong>' . $userTweet ['user'] ['name'] . '</strong></p>';
-									echo '<p>' . $userTweet ['text'] . '</p>';
-									//echo '<p>' . var_dump($userTweet). '</p>';
-									echo '<p class= "text-info date-source">@' . $userTweet ['user'] ['screen_name'] . ' - ' . $userTweet ['created_at'] . '</p>';
-									// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
-									echo '</li>';
-								}
+								// echo var_dump ($userTweets);
+								if ($politicianProfile ['Twitter'] != '') {
+									foreach ( $userTweets as $userTweet ) {
+										echo '<li>';
+										echo '<img src="' . $userTweet ['user'] ['profile_image_url'] . '"  />';
+										echo '<p class= "text-info"><strong>' . $userTweet ['user'] ['name'] . '</strong></p>';
+										echo '<p>' . $userTweet ['text'] . '</p>';
+										// echo '<p>' . var_dump($userTweet). '</p>';
+										echo '<p class= "text-info date-source">@' . $userTweet ['user'] ['screen_name'] . ' - ' . $userTweet ['created_at'] . '</p>';
+										// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
+										echo '</li>';
+									}
 								} else {
-									echo '<p>' .  $translations['NoTwitter'] . '</p>';
-									
+									echo '<p>' . $translations ['NoTwitter'] . '</p>';
 								}
 								
 								?>
@@ -454,21 +437,20 @@ if (ENVIRONMENT == 'development'){
 								<div class="tweets tweets-panel">
 									<ul>
 								<?php
-								if($politicianProfile['Twitter']!='') {
-								# echo var_dump ($tweets ['statuses']);
-								foreach ( $tweets ['statuses'] as $tweet ) {
-									echo '<li>';
-									echo '<img src="' . $tweet ['user'] ['profile_image_url'] . '"  />';
-									echo '<p class= "text-info"><strong>' . $tweet ['user'] ['name'] . '</strong></p>';
-									echo '<p>' . $tweet ['text'] . '</p>';
-									
-									echo '<p class= "text-info date-source">@' . $tweet ['user'] ['screen_name'] . ' - ' . $tweet ['created_at'] . '</p>';
-									// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
-									echo '</li>';
-								}
+								if ($politicianProfile ['Twitter'] != '') {
+									// echo var_dump ($tweets ['statuses']);
+									foreach ( $tweets ['statuses'] as $tweet ) {
+										echo '<li>';
+										echo '<img src="' . $tweet ['user'] ['profile_image_url'] . '"  />';
+										echo '<p class= "text-info"><strong>' . $tweet ['user'] ['name'] . '</strong></p>';
+										echo '<p>' . $tweet ['text'] . '</p>';
+										
+										echo '<p class= "text-info date-source">@' . $tweet ['user'] ['screen_name'] . ' - ' . $tweet ['created_at'] . '</p>';
+										// echo '<p class= "text-success date-source">' . $tweet['created_at'] . '</p>';
+										echo '</li>';
+									}
 								} else {
-									echo '<p>' .  $translations['NoTwitter'] . '</p>';
-									
+									echo '<p>' . $translations ['NoTwitter'] . '</p>';
 								}
 								?>
 

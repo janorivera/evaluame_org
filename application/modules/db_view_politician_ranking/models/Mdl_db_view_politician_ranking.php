@@ -22,5 +22,4 @@ class Mdl_db_view_politician_ranking extends CI_Model {
 		) );
 		return $query->row_array ();
 	}
-
 }

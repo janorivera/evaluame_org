@@ -10,8 +10,8 @@
 			<li class="" data-target="#myCarousel" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner " role="listbox">
-			<div class="item active palette-background-blue" ">
-				
+			<div class="item active palette-background-blue"">
+
 				<div class="container">
 					<div class="carousel-caption">
 						<h1><?php echo $translations['ByState']?></h1>
@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="item palette-background-green">
-				
+
 				<div class="container">
 					<div class="carousel-caption">
 						<h1><?php echo $translations['ByParty']?></h1>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<div class="item palette-background-red">
-				
+
 				<div class="container">
 					<div class="carousel-caption">
 						<h1><?php echo $translations['TopTen']?></h1>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="item palette-background-yellow">
-				
+
 				<div class="container">
 					<div class="carousel-caption">
 						<h1><?php echo $translations['ByAgeGender']?></h1>
@@ -61,64 +61,68 @@
 	</div>
 
 
-	
-		<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<div class="row">
-				<h2 class="text-center text-danger"><?php echo $translations['SiteOnDevelopment']?> </h2>
-			</div>
-			<div class="row " >
 
-
-				<center>
-
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 " style="padding: 50px;">
-						<center>
-							<span class="label label-blue label-circle-huge " > <i
-								class="fa fa-line-chart "> </i>
-							</span>
-
-							<h3 style="margin-top: 40px;"><?php echo $translations['ByParty']?></h3>
-							<p><?php echo $translations['ByPartyText2']?></p>
-						</center>
-					</div>
-
-
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 " style="padding: 50px;">
-						<center>
-							<span class="label label-yellow label-circle-huge"> <i
-								class="fa fa-bar-chart "> </i>
-							</span>
-							<h3 style="margin-top: 40px;"><?php echo $translations['ByState']?></h3>
-							<p><?php echo $translations['ByStateText2']?></p>
-						</center>
-					</div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 " style="padding: 50px;">
-						<center>
-							<span class="label label-red label-circle-huge"> <i
-								class="fa fa-star "> </i>
-							</span>
-						</center>
-
-						<h3 style="margin-top: 40px;"><?php echo $translations['TopTen']?></h3>
-						<p><?php echo $translations['TopTenText2']?></p>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 " style="padding: 50px;">
-						<center>
-							<span class="label label-green label-circle-huge"> <i
-								class="fa fa-heart "> </i>
-							</span>
-						</center>
-
-						<h3 style="margin-top: 40px;"><?php echo $translations['Popularity']?></h3>
-						<p><?php echo $translations['PopularityText']?></p>
-					</div>
-				</center>
-				
-			</div>
-			
+	<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		<div class="row">
+			<h2 class="text-center text-danger"><?php echo $translations['SiteOnDevelopment']?> </h2>
 		</div>
-	
+		<div class="row ">
+
+
+			<center>
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 "
+					style="padding: 50px;">
+					<center>
+						<span class="label label-blue label-circle-huge "> <i
+							class="fa fa-line-chart "> </i>
+						</span>
+
+						<h3 style="margin-top: 40px;"><?php echo $translations['ByParty']?></h3>
+						<p><?php echo $translations['ByPartyText2']?></p>
+					</center>
+				</div>
+
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 "
+					style="padding: 50px;">
+					<center>
+						<span class="label label-yellow label-circle-huge"> <i
+							class="fa fa-bar-chart "> </i>
+						</span>
+						<h3 style="margin-top: 40px;"><?php echo $translations['ByState']?></h3>
+						<p><?php echo $translations['ByStateText2']?></p>
+					</center>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 "
+					style="padding: 50px;">
+					<center>
+						<span class="label label-red label-circle-huge"> <i
+							class="fa fa-star "> </i>
+						</span>
+					</center>
+
+					<h3 style="margin-top: 40px;"><?php echo $translations['TopTen']?></h3>
+					<p><?php echo $translations['TopTenText2']?></p>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 "
+					style="padding: 50px;">
+					<center>
+						<span class="label label-green label-circle-huge"> <i
+							class="fa fa-heart "> </i>
+						</span>
+					</center>
+
+					<h3 style="margin-top: 40px;"><?php echo $translations['Popularity']?></h3>
+					<p><?php echo $translations['PopularityText']?></p>
+				</div>
+			</center>
+
+		</div>
+
+	</div>
+
 </div>
 
 

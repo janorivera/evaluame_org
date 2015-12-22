@@ -80,15 +80,15 @@
 				<div class="row ">
 		
                 <?php
-				$attributes = array (
-						"class" => "form-horizontal",
-						"id" => "contactform",
-						"name" => "contactform",
-						"role" => "form" 
-				);
-				echo form_open ( "mb_contact/send_msg", $attributes );
-				// <form method="post" action="" id="contactfrm" role="form">
-				?>
+																$attributes = array (
+																		"class" => "form-horizontal",
+																		"id" => "contactform",
+																		"name" => "contactform",
+																		"role" => "form" 
+																);
+																echo form_open ( "mb_contact/send_msg", $attributes );
+																// <form method="post" action="" id="contactfrm" role="form">
+																?>
               
 
                     <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 ">

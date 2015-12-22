@@ -1,14 +1,12 @@
 <?php
 /*
-| -------------------------------------------------------------------
-|  Public View PoliticianScoresGroupByGender [GPG]
-| -------------------------------------------------------------------
-| 
-|
-|
-*/
-
-
+ * | -------------------------------------------------------------------
+ * | Public View PoliticianScoresGroupByGender [GPG]
+ * | -------------------------------------------------------------------
+ * |
+ * |
+ * |
+ */
 if (! defined ( 'BASEPATH' ))
 	exit ( 'No direct script access allowed' );
 class Mdl_db_view_politician_scores_gbg extends CI_Model {
@@ -32,5 +30,4 @@ class Mdl_db_view_politician_scores_gbg extends CI_Model {
 		) );
 		return $query->result_array ();
 	}
-
 }
