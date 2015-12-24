@@ -108,12 +108,14 @@ class Facebook {
 					'GET',
 					'/'.$fbUser['id'].'/picture'
 			);
+			
 			$response = $request2->execute();
+			$pic= $response->getGraphObject()->getProperty('picture')->data->url;
 			$graphObject = $response->getGraphObject();
 			
 			
 				
-			return $graphObject;
+			return $pic;
 		}
 		return false;
 	}
