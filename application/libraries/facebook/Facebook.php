@@ -91,4 +91,22 @@ class Facebook {
 		}
 		return false;
 	}
+	
+	public function get_user_profile_picture() {
+		if ($this->session) {
+			/**
+			 * Retrieve User’s Profile Information
+			 */
+			// Graph API to request user data
+			$request = (new FacebookRequest ( $this->session, 'GET', '/{user-id}/picture' ))->execute ();
+				
+			// Get response as an array
+			$profile_picture = $request->getGraphObject ()->asArray ();
+				
+			return $profile_picture;
+		}
+		return false;
+	}
+	
+	
 }
