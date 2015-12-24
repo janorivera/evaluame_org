@@ -98,6 +98,7 @@ class Facebook {
 			 * Retrieve User’s Profile Information
 			 */
 			// Graph API to request user data
+			/*
 			$request = (new FacebookRequest ( $this->session, 'GET', '/me/picture' ))->execute ();
 				
 			// Get response as an array
@@ -112,7 +113,12 @@ class Facebook {
 			$response = $request2->execute();
 			$pic= $response->getGraphObject()->getProperty('picture')->data->url;
 			$graphObject = $response->getGraphObject();
+			*/
 			
+			$request = new FacebookRequest( $this->session, 'GET', '/me?fields=id,first_name,email,gender,birthday,picture.url' );
+			$response = $request->execute();
+			$array = $response->getResponse();
+			$pic = $array->picture->data->url;
 			
 				
 			return $pic;
