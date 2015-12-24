@@ -115,11 +115,11 @@ class Facebook {
 			$graphObject = $response->getGraphObject();
 			*/
 			
-			$request = new FacebookRequest( $this->session, 'GET', '/me?fields=id,first_name,email,gender,birthday,picture.url' );
+			
+			$request = new FacebookRequest( $this->session, 'GET', '/me/picture' );
 			$response = $request->execute();
 			$array = $response->getResponse();
 			$pic = $array->picture->data->url;
-			
 				
 			return $pic;
 		}
