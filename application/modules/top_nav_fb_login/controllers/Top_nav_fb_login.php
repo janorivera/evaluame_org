@@ -42,7 +42,7 @@ class Top_nav_fb_login extends MX_Controller {
 			$data ['user'] = $user;
 			$data ['fbLoginUrl'] = $this->facebook->login_url ();
 		} else if ((($fbUser = $this->facebook->get_user ()) != false) && $action == 'login') {
-			
+			log_message('error', $fbUser);
 			if (($user = $this->Mdl_top_nav_fb_login->get_fb_user ( $fbUser ['id'] )) == NULL) {
 				$this->Mdl_top_nav_fb_login->insert_fb_user ( $fbUser );
 				$user = $this->Mdl_top_nav_fb_login->get_fb_user ( $fbUser ['id'] );
