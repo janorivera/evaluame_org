@@ -54,6 +54,7 @@ class Top_nav_fb_login extends MX_Controller {
 			$this->session->lastName = $user ['LastName'];
 			$this->session->userId = $user ['UserId'];
 			$data ['user'] = $user;
+			$data ['fbUser'] = $fbUser;
 		}
 		/*
 		 * if ($action=='test'){
