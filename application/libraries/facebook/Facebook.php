@@ -101,7 +101,7 @@ class Facebook {
 			$request = (new FacebookRequest ( $this->session, 'GET', '/'.$fbUser ['id'].'/picture' ))->execute ();
 				
 			// Get response as an array
-			$profile_picture = $request->getGraphObject ()->asArray ();
+			$profile_picture = $request->getGraphObject ();
 				
 			return $profile_picture;
 		}
