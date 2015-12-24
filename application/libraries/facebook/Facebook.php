@@ -102,8 +102,18 @@ class Facebook {
 				
 			// Get response as an array
 			$profile_picture = $request->getGraphObject ();
+			
+			$request2 = new FacebookRequest(
+					$this->session,
+					'GET',
+					'/'.$fbUser['id'].'/picture'
+			);
+			$response = $request2->execute();
+			$graphObject = $response->getGraphObject();
+			
+			
 				
-			return $profile_picture;
+			return $graphObject;
 		}
 		return false;
 	}
