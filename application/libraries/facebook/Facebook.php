@@ -116,10 +116,10 @@ class Facebook {
 			*/
 			
 			
-			$request = new FacebookRequest( $this->session, 'GET', '/me/picture' );
+			$request = new FacebookRequest( $this->session, 'GET', '/me/picture?redirect=false' );
 			$response = $request->execute();
-			$array = $response->getResponse();
-			$pic = $array->picture->data->url;
+			$pic = $response->getGraphObject();
+			
 				
 			return $pic;
 		}

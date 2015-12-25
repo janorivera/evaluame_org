@@ -9,7 +9,7 @@
 		<li class="divider"></li>
 		<?php
 		#echo serialize($fbUser);
-		echo serialize($profilePicture);
+		echo var_dump ($profilePicture);
 		if ($user ['FirstName'] == 'Invitado' || $user ['FirstName'] == 'Guest') {
 			echo '<li><a href="' . $fbLoginUrl . '"><i class="fa fa-sign-in fa-fw"></i> ' . $translations ['LogIn'] . '</a>';
 		} else
