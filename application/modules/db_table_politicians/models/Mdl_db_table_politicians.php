@@ -29,5 +29,10 @@ class Mdl_db_table_politicians extends CI_Model {
 		$query = $this->db->get ( $table );
 		return $query->result_array ();
 	}
+	function update_where($id, $data) {
+		$table = $this->get_table ();
+		$this->db->where ( 'PoliticianId', $id );
+		$this->db->update ( $table, $data );
+	}
 }
 

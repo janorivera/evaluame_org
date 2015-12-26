@@ -10,10 +10,19 @@ class Mdl_mb_politician_info extends CI_Model {
 		$this->load->model ( 'db_view_politician_scores_gbg/Mdl_db_view_politician_scores_gbg' );
 		$this->load->model ( 'db_table_politician_scores/Mdl_db_table_politician_scores' );
 		$this->load->model ( 'db_table_politician_history/Mdl_db_table_politician_history' );
+		$this->load->model ( 'db_table_conversations/Mdl_db_table_conversations' );
+		$this->load->model ( 'db_table_politicians/Mdl_db_table_politicians' );
 	}
 	function get_politician_profile($politicianId) {
 		$politicianProfile = $this->Mdl_db_view_politician_profile->get_where ( $politicianId );
-		
+		if ($politicianProfile['ConversationId'] == null) {
+			$newConversation['Title']= 'Conversation for politician id:'.strval($politicianId);
+			$this->Mdl_db_table_conversations->insert($newConversation);
+			$conversation = $this->Mdl_db_table_conversations->get_where($newConversation['Title']);
+			$politician['ConversationId']=$conversation['ConversationId'];
+			$this->Mdl_db_table_politicians->update_where($politicianId,$politician);
+			$politicianProfile['ConversationId']=$conversation['ConversationId'];
+		}
 		return $politicianProfile;
 	}
 	function get_politician_score($userId, $politicianId) {

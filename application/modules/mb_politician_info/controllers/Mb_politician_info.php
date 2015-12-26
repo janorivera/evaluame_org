@@ -33,6 +33,10 @@ class Mb_politician_info extends MX_Controller {
 		$data ['politicianHistoricScoreUser'] = $this->Mdl_mb_politician_info->get_politician_historic_score_user ( $this->session->userId, $params ['politicianId'] );
 		$data ['politicianSummary'] = $this->Mdl_mb_politician_info->get_politician_summary ( $params ['politicianId'] );
 		
+		
+			
+		
+		
 		/*
 		 * The following sections need internet to get the news and tweets
 		 * Set ONLINE to false to work offline

@@ -469,7 +469,7 @@ if (ENVIRONMENT == 'development') {
 
 								 <?php
 									$this->load->module ( 'sb_comments' );
-									$this->sb_comments->display_comments ();
+									$this->sb_comments->display_comments ($politicianProfile['ConversationId']);
 						
 									?>
 
@@ -492,7 +492,7 @@ if (ENVIRONMENT == 'development') {
 <script type="text/javascript">
    
 	var politicianhistoricscoreavg = <?php echo json_encode($dataset1); ?>;
-	var politicianhistoricscoreuser = <?php  if ($this->session->userId == null)  echo json_encode( 0); else echo json_encode($dataset2); ?>;
+	var politicianhistoricscoreuser = <?php  if ($this->session->userId == null ||  empty( $dataset2 ))  echo json_encode( 0); else echo json_encode($dataset2); ?>;
 </script>
 <!-- /.container -->
 

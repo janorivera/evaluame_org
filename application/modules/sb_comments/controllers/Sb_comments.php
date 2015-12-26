@@ -9,12 +9,13 @@ class Sb_comments extends MX_Controller {
 	
 	
 	
-	public function display_comments()
-	{
+	public function display_comments($conversationId)
+	{ 
+		if ($conversationId==null) $conversationId=0;
 		log_message('error', 'Displaying comments');
 		$id_post=1;
-		$data['comments'] = $this->Mdl_sb_comments->get_comments(0);
-		$data['conversationId']=1;
+		$data['comments'] = $this->Mdl_sb_comments->get_comments($conversationId);
+		$data['conversationId']=$conversationId;
 		$this->load->view ( 'view_sb_comments',$data );
 	}
 	
@@ -26,8 +27,9 @@ class Sb_comments extends MX_Controller {
 		$name = htmlentities($name);
 		$email = htmlentities($email);
 		$comment = htmlentities($comment);
+		$conversationId=htmlentities($conversation_id);
 		$date=date('Y-m-d H:i');
-		$conversationId=1;
+	
 		// Connect to the database
 		
 		
