@@ -14,7 +14,7 @@ class Sb_comments extends MX_Controller {
 		log_message('error', 'Displaying comments');
 		$id_post=1;
 		$data['comments'] = $this->Mdl_sb_comments->get_comments(0);
-		$data['conversationId']=0;
+		$data['conversationId']=1;
 		$this->load->view ( 'view_sb_comments',$data );
 	}
 	
