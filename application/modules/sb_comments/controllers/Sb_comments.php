@@ -35,6 +35,8 @@ class Sb_comments extends MX_Controller {
 		// https://fr.gravatar.com/site/implement/images/php/
 		$default = "mm";
 		$size = 35;
+		
+		log_message('error', $this->session->profilePicture);
 		if ($this->session->profilePicture!=null){
 			$profilePicture = $this->session->profilePicture;
 		} else {
