@@ -27,7 +27,7 @@ class Sb_comments extends MX_Controller {
 		$email = htmlentities($email);
 		$comment = htmlentities($comment);
 		$date=date('Y-m-d H:i');
-		$conversationId=0;
+		$conversationId=1;
 		// Connect to the database
 		
 		
