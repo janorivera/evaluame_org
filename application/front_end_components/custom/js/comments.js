@@ -37,7 +37,7 @@
             }else{ 
                 $.ajax({
                     type: "POST",
-                    url: "/evaluame_org_forum/sb_comments/submit_comment/",
+                    url: "/evaluame_org/sb_comments/submit_comment/",
                     data: 'act=add-com&conversation_id='+conversation_id+'&name='+theName.val()+'&email='+theMail.val()+'&comment='+theCom.val(),
                     success: function(html){
                         theCom.val('');
