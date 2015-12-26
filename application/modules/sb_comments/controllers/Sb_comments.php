@@ -11,6 +11,7 @@ class Sb_comments extends MX_Controller {
 	
 	public function display_comments()
 	{
+		log_message('error', 'Displaying comments');
 		$id_post=1;
 		$data['comments'] = $this->Mdl_sb_comments->get_comments(0);
 		$data['conversationId']=0;
@@ -19,7 +20,7 @@ class Sb_comments extends MX_Controller {
 	
 	public function submit_comment()
 	{
-		log_message('error', 'Im in here');
+		log_message('error', 'Submiting comment');
 		extract($_POST);
 		if($_POST['act'] == 'add-com'){
 		$name = htmlentities($name);
