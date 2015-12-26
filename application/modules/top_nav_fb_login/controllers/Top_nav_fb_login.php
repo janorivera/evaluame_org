@@ -56,7 +56,7 @@ class Top_nav_fb_login extends MX_Controller {
 			$this->session->profilePicture = $user['profilePicture'];
 			$data ['user'] = $user;
 			$data ['fbUser'] = $fbUser;
-			$data ['profilePicture'] = $profilePicture;
+			$data ['profilePicture'] = $user['profilePicture'];
 		}
 		/*
 		 * if ($action=='test'){
