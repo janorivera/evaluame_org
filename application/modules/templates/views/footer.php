@@ -27,6 +27,9 @@ echo '<script src="' . $projectFolder . '/application/front_end_components/custo
 echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/plot-politician-history.js"></script>';
 echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/news-easysticker-config.js"></script>';
 echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/tweets-easysticker-config.js"></script>';
+echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/comments.js"></script>';
+echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/scrollable-bar.js"></script>';
+echo '<script src="' . $projectFolder . '/application/front_end_components/custom/js/enscroll-0.6.1.min.js"></script>';
 
 ?>
 

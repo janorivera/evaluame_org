@@ -38,11 +38,11 @@ class Top_nav_fb_login extends MX_Controller {
 				$user ['Name'] = 'Invitado';
 				$user ['FirstName'] = 'Invitado';
 			}
-			
+			$user['profilePicture']="http://www.gravatar.com/avatar/?d=mm&s=35";
 			$data ['user'] = $user;
 			$data ['fbLoginUrl'] = $this->facebook->login_url ();
 		} else if ((($fbUser = $this->facebook->get_user ()) != false) && $action == 'login') {
-			$profilePicture = $this->facebook->get_user_profile_picture($fbUser);
+			$user['profilePicture'] = $this->facebook->get_user_profile_picture($fbUser);
 			if (($user = $this->Mdl_top_nav_fb_login->get_fb_user ( $fbUser ['id'] )) == NULL) {
 				$this->Mdl_top_nav_fb_login->insert_fb_user ( $fbUser );
 				$user = $this->Mdl_top_nav_fb_login->get_fb_user ( $fbUser ['id'] );
@@ -53,6 +53,7 @@ class Top_nav_fb_login extends MX_Controller {
 			$this->session->firstName = $user ['FirstName'];
 			$this->session->lastName = $user ['LastName'];
 			$this->session->userId = $user ['UserId'];
+			$this->session->profilePicture = $user['profilePicture'];
 			$data ['user'] = $user;
 			$data ['fbUser'] = $fbUser;
 			$data ['profilePicture'] = $profilePicture;

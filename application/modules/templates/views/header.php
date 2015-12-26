@@ -70,6 +70,8 @@
 	echo '<link href="' . $projectFolder . '/application/front_end_components/custom/css/shop-item.css" rel="stylesheet">';
 	echo '<link href="' . $projectFolder . '/application/front_end_components/custom/css/news-easysticker-config.css" rel="stylesheet">';
 	echo '<link href="' . $projectFolder . '/application/front_end_components/custom/css/tweets-easysticker-config.css" rel="stylesheet">';
+	echo '<link href="' . $projectFolder . '/application/front_end_components/custom/css/comments.css" rel="stylesheet">';
+	echo '<link href="' . $projectFolder . '/application/front_end_components/custom/css/scrollable-bar.css" rel="stylesheet">';
 	
 	echo '<link href="' . $projectFolder . '/application/front_end_components/morrisJs/css/morris.css" rel="stylesheet">';
 	echo '<link href="' . $projectFolder . '/application/front_end_components/fontAwesome/css/font-awesome.min.css" rel="stylesheet">';

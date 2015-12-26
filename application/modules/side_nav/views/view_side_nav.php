@@ -36,16 +36,7 @@
             <?php
 			$this->load->module ( 'side_nav_politicians' );
 			$this->side_nav_politicians->display_side_nav_politicians ();
-			
-			/*
-			 * foreach ($pageViews ['sideNav']as $view){
-			 *
-			 * $pageViews [$view] = new $view;
-			 * $view->render();
-			 *
-			 *
-			 * }
-			 */
+
 			?>
             <li><a href="#"><i class="fa fa-edit fa-fw"></i> <?php echo $translations['Forums']?></a>
 			</li>

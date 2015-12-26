@@ -95,6 +95,7 @@ if (ENVIRONMENT == 'development') {
 				<li><a data-toggle="tab" href="#Aprobacion"><?php echo $translations['Approval']?></a></li>
 				<li><a data-toggle="tab" href="#Noticias"><?php echo $translations['News']?></a></li>
 				<li><a data-toggle="tab" href="#Social"><?php echo $translations['Social']?></a></li>
+				<li><a data-toggle="tab" href="#Comments">Comentarios</a></li>
 			</ul>
 
 			<div class="tab-content">
@@ -348,11 +349,6 @@ if (ENVIRONMENT == 'development') {
 								</ul>
 							</div>
 
-
-
-
-
-
 						</div>
 						<!-- /.panel-body -->
 					</div>
@@ -467,7 +463,23 @@ if (ENVIRONMENT == 'development') {
 				<!-- /.tab-pane -->
 
 
+	<div id="Comments" class="tab-pane fade">
+					<div class="panel panel-default">
+						<div class="panel-body cmt-container" id="bodyDiv" >
 
+								 <?php
+									$this->load->module ( 'sb_comments' );
+									$this->sb_comments->display_comments ();
+						
+									?>
+
+
+						</div>
+						<!-- /.panel-body -->
+					</div>
+					<!-- /.panel -->
+				</div>
+				<!-- /.tab-pane -->
 
 
 			</div>

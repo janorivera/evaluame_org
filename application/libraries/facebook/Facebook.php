@@ -95,33 +95,13 @@ class Facebook {
 	public function get_user_profile_picture($fbUser) {
 		if ($this->session) {
 			/**
-			 * Retrieve User’s Profile Information
+			 * Retrieve User’s Profile Picture
 			 */
 			// Graph API to request user data
-			/*
-			$request = (new FacebookRequest ( $this->session, 'GET', '/me/picture' ))->execute ();
-				
-			// Get response as an array
-			$profile_picture = $request->getGraphObject ();
-			
-			$request2 = new FacebookRequest(
-					$this->session,
-					'GET',
-					'/'.$fbUser['id'].'/picture'
-			);
-			
-			$response = $request2->execute();
-			$pic= $response->getGraphObject()->getProperty('picture')->data->url;
-			$graphObject = $response->getGraphObject();
-			*/
-			
-			
 			$request = new FacebookRequest( $this->session, 'GET', '/me/picture?redirect=false' );
 			$response = $request->execute();
 			$picObject = $response->getGraphObject()->asArray();
 			$picUrl = $picObject["url"];
-			
-				
 			return $picUrl;
 		}
 		return false;
