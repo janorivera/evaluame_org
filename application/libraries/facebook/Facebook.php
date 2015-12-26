@@ -92,7 +92,7 @@ class Facebook {
 		return false;
 	}
 	
-	public function get_user_profile_picture($fbUser) {
+	public function get_user_profile_picture() {
 		if ($this->session) {
 			/**
 			 * Retrieve User’s Profile Picture
